@@ -28,9 +28,9 @@ for k, v in contacts.items():
     row_dict['Family Name'] = v['Family Name']
     if len(v['phones']) > 0:
         for i in range(1, len(v['phones'])+1):
-            key = f'Phone {i} - Type'
+            key = 'Phone '+str(i)+' - Type'
             row_dict[key] = 'Work' # можно попробовать пустую строку, не вполне понятно обязательно ли определять тип       
-            key = f'Phone {i} - Value'
+            key = 'Phone '+str(i)+' - Value'
             row_dict[key] = v['phones'][i-1].strip()
             if row_dict[key].startswith('00'): row_dict[key] = '+'+row_dict[key][2:]     
             if i == 4:
