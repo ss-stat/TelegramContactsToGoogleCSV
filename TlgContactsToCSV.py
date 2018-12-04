@@ -2,7 +2,8 @@ import json
 import csv
 
 # Open the result.json in the current directory
-with open('result.json') as f:
+encoding = 'utf-8' # 'cp1251', 'mac_cyrillic','cp866' 
+with open('result.json', encoding=encoding) as f:
     data = json.loads(f.read())
 
 # Find and combine the phones of one person 
